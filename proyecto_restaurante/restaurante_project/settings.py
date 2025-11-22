@@ -92,18 +92,29 @@ WSGI_APPLICATION = 'restaurante_project.wsgi.application'
 
 
 # ---------------------------------------------
-# DATABASE (POSTGRESQL)
+# DATABASE (SQLITE - TEMPORAL PARA DESARROLLO)
 # ---------------------------------------------
+# NOTA: Cambiar a PostgreSQL cuando se configure correctamente
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'restaurante_db',
-        'USER': 'postgres',
-        'PASSWORD': 'laura1076502740',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# ---------------------------------------------
+# DATABASE (POSTGRESQL) - DESCOMENTAR CUANDO ESTÉ CONFIGURADO
+# ---------------------------------------------
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'restaurante_db',
+#         'USER': 'postgres',
+#         'PASSWORD': 'laura1076502740',  # Cambiar por tu contraseña real
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 
 # ---------------------------------------------
